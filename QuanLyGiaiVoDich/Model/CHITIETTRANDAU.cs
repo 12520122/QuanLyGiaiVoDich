@@ -10,7 +10,6 @@ namespace QuanLyGiaiVoDich.Model
     public partial class CHITIETTRANDAU
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MABT { get; set; }
 
         public int? MATD { get; set; }
@@ -20,11 +19,5 @@ namespace QuanLyGiaiVoDich.Model
         public int THOIDIEM { get; set; }
 
         public int? MALOAIBT { get; set; }
-
-        public virtual CAUTHU CAUTHU { get; set; }
-
-        public virtual LOAIBANTHANG LOAIBANTHANG { get; set; }
-
-        public virtual TRANDAU TRANDAU { get; set; }
     }
 }

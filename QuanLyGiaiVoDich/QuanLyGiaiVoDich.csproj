@@ -43,7 +43,6 @@
       <HintPath>..\packages\ModernUI.WPF.1.0.6\lib\net45\FirstFloor.ModernUI.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
@@ -70,31 +69,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Model\BANGXEPHANG.cs" />
-    <Compile Include="Model\BOPHAN.cs" />
     <Compile Include="Model\CAUTHU.cs" />
     <Compile Include="Model\CHITIETTRANDAU.cs" />
-    <Compile Include="Model\CHUCVU.cs" />
-    <Compile Include="Model\DANHSACHGHIBAN.cs" />
     <Compile Include="Model\DOIBONG.cs" />
-    <Compile Include="Model\DOIBONG_CAUTHU.cs" />
-    <Compile Include="Model\DOIBONG_MUAGIAI.cs" />
-    <Compile Include="Model\GIAMSATVIEN.cs" />
-    <Compile Include="Model\KETQUA.cs" />
     <Compile Include="Model\LOAIBANTHANG.cs" />
     <Compile Include="Model\LOAICAUTHU.cs" />
-    <Compile Include="Model\MUAGIAI.cs" />
-    <Compile Include="Model\NHANVIEN.cs" />
-    <Compile Include="Model\NHATAITRO.cs" />
-    <Compile Include="Model\QuanLyGiaiVoDich.cs" />
-    <Compile Include="Model\QUYDINHBANTHANG.cs" />
-    <Compile Include="Model\QUYDINHCAUTHU.cs" />
+    <Compile Include="Model\QuanLyGiaiVoDichDataContext.cs" />
     <Compile Include="Model\SAN.cs" />
-    <Compile Include="Model\sysdiagram.cs" />
-    <Compile Include="Model\THEPHAT.cs" />
+    <Compile Include="Model\tbModel\DoiBongSan.cs" />
     <Compile Include="Model\TRANDAU.cs" />
-    <Compile Include="Model\TRONGTAI.cs" />
-    <Compile Include="Model\VONGDAU.cs" />
+    <Compile Include="Properties\Annotations.cs" />
     <Compile Include="ViewModel\DoiBong.cs" />
     <Compile Include="View\DoiBong.xaml.cs">
       <DependentUpon>DoiBong.xaml</DependentUpon>
