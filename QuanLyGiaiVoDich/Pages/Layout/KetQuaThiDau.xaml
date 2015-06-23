@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="QuanLyGiaiVoDich.Pages.List.ThongKe"
+﻿<UserControl x:Class="QuanLyGiaiVoDich.Pages.Layout.KetQuaThiDau"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -11,10 +11,8 @@
         <mui:ModernTab Layout="List">
             <mui:ModernTab.Links>
                 <!-- TODO: set @Source -->
-                <mui:Link DisplayName="danh sách đội bóng" />
-                <mui:Link DisplayName="danh sách cầu thủ" />
-                <mui:Link DisplayName="lịch thi đấu" />
-                <mui:Link DisplayName="biên bản thi đấu" />
+                <mui:Link DisplayName="Item 1" />
+                <mui:Link DisplayName="Item 2" />
             </mui:ModernTab.Links>
         </mui:ModernTab>
     </Grid>

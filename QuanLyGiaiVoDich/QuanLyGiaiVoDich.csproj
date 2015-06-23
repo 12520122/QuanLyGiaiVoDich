@@ -31,12 +31,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="FirstFloor.ModernUI, Version=1.0.6.0, Culture=neutral, PublicKeyToken=2d21ec3cd074c59a, processorArchitecture=MSIL">
       <HintPath>..\packages\ModernUI.WPF.1.0.6\lib\net45\FirstFloor.ModernUI.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,6 +69,35 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\BANGXEPHANG.cs" />
+    <Compile Include="Model\BOPHAN.cs" />
+    <Compile Include="Model\CAUTHU.cs" />
+    <Compile Include="Model\CHITIETTRANDAU.cs" />
+    <Compile Include="Model\CHUCVU.cs" />
+    <Compile Include="Model\DANHSACHGHIBAN.cs" />
+    <Compile Include="Model\DOIBONG.cs" />
+    <Compile Include="Model\DOIBONG_CAUTHU.cs" />
+    <Compile Include="Model\DOIBONG_MUAGIAI.cs" />
+    <Compile Include="Model\GIAMSATVIEN.cs" />
+    <Compile Include="Model\KETQUA.cs" />
+    <Compile Include="Model\LOAIBANTHANG.cs" />
+    <Compile Include="Model\LOAICAUTHU.cs" />
+    <Compile Include="Model\MUAGIAI.cs" />
+    <Compile Include="Model\NHANVIEN.cs" />
+    <Compile Include="Model\NHATAITRO.cs" />
+    <Compile Include="Model\QuanLyGiaiVoDich.cs" />
+    <Compile Include="Model\QUYDINHBANTHANG.cs" />
+    <Compile Include="Model\QUYDINHCAUTHU.cs" />
+    <Compile Include="Model\SAN.cs" />
+    <Compile Include="Model\sysdiagram.cs" />
+    <Compile Include="Model\THEPHAT.cs" />
+    <Compile Include="Model\TRANDAU.cs" />
+    <Compile Include="Model\TRONGTAI.cs" />
+    <Compile Include="Model\VONGDAU.cs" />
+    <Compile Include="ViewModel\DoiBong.cs" />
+    <Compile Include="View\DoiBong.xaml.cs">
+      <DependentUpon>DoiBong.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,31 +106,27 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\List\BaoCao.xaml">
+    <Page Include="Pages\Layout\BaoCao.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\List\BaoCaoThongKe.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pages\List\KetQuaThiDau.xaml">
+    <Page Include="Pages\Layout\BieuMau.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\List\LichThiDau.xaml">
+    <Page Include="Pages\Layout\KetQuaThiDau.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\List\QuanLyDoi.xaml">
+    <Page Include="Pages\Layout\LichThiDau.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\List\ThongKe.xaml">
+    <Page Include="Pages\Layout\QuanLyDoiBong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\List\ThongTinGiaiDau.xaml">
+    <Page Include="Pages\Layout\ThongTinGiaiDau.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -98,25 +134,22 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Compile Include="Pages\List\BaoCao.xaml.cs">
+    <Compile Include="Pages\Layout\BaoCao.xaml.cs">
       <DependentUpon>BaoCao.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\List\BaoCaoThongKe.xaml.cs">
-      <DependentUpon>BaoCaoThongKe.xaml</DependentUpon>
+    <Compile Include="Pages\Layout\BieuMau.xaml.cs">
+      <DependentUpon>BieuMau.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\List\KetQuaThiDau.xaml.cs">
+    <Compile Include="Pages\Layout\KetQuaThiDau.xaml.cs">
       <DependentUpon>KetQuaThiDau.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\List\LichThiDau.xaml.cs">
+    <Compile Include="Pages\Layout\LichThiDau.xaml.cs">
       <DependentUpon>LichThiDau.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\List\QuanLyDoi.xaml.cs">
-      <DependentUpon>QuanLyDoi.xaml</DependentUpon>
+    <Compile Include="Pages\Layout\QuanLyDoiBong.xaml.cs">
+      <DependentUpon>QuanLyDoiBong.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\List\ThongKe.xaml.cs">
-      <DependentUpon>ThongKe.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\List\ThongTinGiaiDau.xaml.cs">
+    <Compile Include="Pages\Layout\ThongTinGiaiDau.xaml.cs">
       <DependentUpon>ThongTinGiaiDau.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Settings\About.xaml.cs">
@@ -145,13 +178,16 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="View\DoiBong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="QuanLyGiaiVoDich.View.DoiBong"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="700">
+    <Grid Style="{StaticResource ContentRoot}">
+        <StackPanel Orientation="Vertical" Margin="0,10,0,134" HorizontalAlignment="Left">
+            <StackPanel.Resources>
+                <Style TargetType="StackPanel">
+                    <Setter Property="Orientation" Value="Horizontal"></Setter>
+                    <Setter Property="Margin" Value="0,10"></Setter>
+                </Style>
+                <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                    <Setter Property="Width" Value="80"></Setter>
+                    <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                    <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                </Style>
+                
+                <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+                    <Setter Property="Width" Value="200"></Setter>
+                    <Setter Property="Margin" Value="0,0,15,0"></Setter>
+                </Style>
+                
+                <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                    <Setter Property="Width" Value="100"></Setter>
+                    <Setter Property="Margin" Value="20,10,20,10"></Setter>
+                </Style>
+
+            </StackPanel.Resources>
+            <StackPanel>
+                <Label>Tên Đội:</Label>
+                <TextBox></TextBox>
+                <Label>Mùa Giải:</Label>
+                <ComboBox Width="200"></ComboBox>
+            </StackPanel>
+
+            <StackPanel >
+                <Label>Sân Nhà:</Label>
+                <TextBox></TextBox>          
+                <Label>Sức Chứa:</Label>
+                <TextBox Width="80"></TextBox>  
+                <Label>Địa Chỉ:</Label>
+                <TextBox></TextBox>
+            </StackPanel>
+
+            <StackPanel HorizontalAlignment="Center">
+                <Button Content="Xác Nhận" ></Button>
+                <Button Content="Hủy" ></Button>
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical">
+                <TextBlock HorizontalAlignment="Left" Margin="0,10,0,20">Đanh Sách Đội Bóng</TextBlock>
+                <DataGrid>
+                    <DataGrid.Columns>
+                        <mui:DataGridTextColumn Header="Mã Đội" />
+                        <mui:DataGridTextColumn Header="Tên Đội" />
+                        <mui:DataGridTextColumn Header="Tên Mùa Giải" />
+                        <mui:DataGridTextColumn Header="Sân Nhà" />
+                        <mui:DataGridCheckBoxColumn Header="Sức Chứa"  />
+                        <mui:DataGridComboBoxColumn Header="Địa Chỉ"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

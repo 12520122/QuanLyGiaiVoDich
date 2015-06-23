@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QuanLyGiaiVoDich.Pages.List
+namespace QuanLyGiaiVoDich.Pages.Layout
 {
     /// <summary>
     /// Interaction logic for ThongTinGiaiDau.xaml

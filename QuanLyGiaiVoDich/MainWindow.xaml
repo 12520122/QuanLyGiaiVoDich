@@ -3,38 +3,39 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
         Title="mui" IsTitleVisible="True"
-        ContentSource="Pages/List/ThongTinGiaiDau.xaml" 
-        WindowStartupLocation="CenterScreen">
         
+        ContentSource="Pages/Layout/QuanLyDoiBong.xaml" 
+        WindowStartupLocation="CenterScreen" Width="1200" Height="700">
 
     <mui:ModernWindow.MenuLinkGroups>
         <mui:LinkGroup DisplayName="Thông Tin Giải Đấu">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="home" Source="Pages/List/ThongTinGiaiDau.xaml" />
+                <mui:Link Source="Pages/Layout/ThongTinGiaiDau.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
 
         <mui:LinkGroup DisplayName="Quản Lý Đội Bóng">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="home" Source="/Pages/List/QuanLyDoi.xaml" />
+                <mui:Link DisplayName="home" Source="/Pages/Layout/QuanLyDoiBong.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
 
         <mui:LinkGroup DisplayName="Lịch Thi Đấu">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="home" Source="/Pages/List/LichThiDau.xaml" />
+                <mui:Link Source="/Pages/Layout/LichThiDau.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
 
         <mui:LinkGroup DisplayName="Kết Quả Thi Đấu">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="home" Source="/Pages/List/KetQuaThiDau.xaml" />
+                <mui:Link Source="/Pages/Layout/KetQuaThiDau.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
 
         <mui:LinkGroup DisplayName="Thống Kế - Báo Cáo">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="home" Source="/Pages/List/BaoCaoThongKe.xaml" />
+                <mui:Link DisplayName="Báo Cáo" Source="/Pages/Layout/BaoCao.xaml" />
+                <mui:Link DisplayName="Biểu Mẫu" Source="/Pages/Layout/BieuMau.xaml" />
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
 

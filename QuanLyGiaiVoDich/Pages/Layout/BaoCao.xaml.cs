@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QuanLyGiaiVoDich.Pages.List
+namespace QuanLyGiaiVoDich.Pages.Layout
 {
     /// <summary>
-    /// Interaction logic for ThongKe.xaml
+    /// Interaction logic for BaoCao.xaml
     /// </summary>
-    public partial class ThongKe : UserControl
+    public partial class BaoCao : UserControl
     {
-        public ThongKe()
+        public BaoCao()
         {
             InitializeComponent();
         }

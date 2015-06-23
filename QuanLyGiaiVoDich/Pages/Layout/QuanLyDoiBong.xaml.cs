@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QuanLyGiaiVoDich.Pages.List
+namespace QuanLyGiaiVoDich.Pages.Layout
 {
     /// <summary>
-    /// Interaction logic for QuanLyDoi.xaml
+    /// Interaction logic for QuanLyDoiBong.xaml
     /// </summary>
-    public partial class QuanLyDoi : UserControl
+    public partial class QuanLyDoiBong : UserControl
     {
-        public QuanLyDoi()
+        public QuanLyDoiBong()
         {
             InitializeComponent();
         }

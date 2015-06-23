@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QuanLyGiaiVoDich.Pages.List
+namespace QuanLyGiaiVoDich.Pages.Layout
 {
     /// <summary>
-    /// Interaction logic for KetQuaThiDau.xaml
+    /// Interaction logic for LichThiDau.xaml
     /// </summary>
-    public partial class KetQuaThiDau : UserControl
+    public partial class LichThiDau : UserControl
     {
-        public KetQuaThiDau()
+        public LichThiDau()
         {
             InitializeComponent();
         }
