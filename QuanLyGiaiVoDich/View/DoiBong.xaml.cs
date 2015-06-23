@@ -26,7 +26,7 @@ namespace QuanLyGiaiVoDich.View
         {
             InitializeComponent();
             ObservableCollection<DOIBONG> db = laydoi();
-            muagiai.DataContext = db;
+            muagiai.DataContext = db.ToString();
 
         }
 
