@@ -35,7 +35,7 @@
                 <Label>Tên Đội:</Label>
                 <TextBox></TextBox>
                 <Label>Mùa Giải:</Label>
-                <ComboBox Width="200"></ComboBox>
+                <ComboBox Name="muagiai" Width="200"></ComboBox>
             </StackPanel>
 
             <StackPanel >
