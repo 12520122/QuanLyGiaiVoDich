@@ -23,28 +23,54 @@ namespace QuanLyGiaiVoDich.View
     /// </summary>
     public partial class DoiBong : UserControl
     {
+        QuanLyGiaiVoDichDataContext dataContext = new QuanLyGiaiVoDichDataContext();
+
         public DoiBong()
         {
             InitializeComponent();
-            ObservableCollection<DoiBongSan> tbDoiBongSans = Get_DoiBong_San();
-            DataGridDoi.ItemsSource = tbDoiBongSans;
+
+            ObservableCollection<DoiBongSan> doiBongSans = FillData();
+
+            DataGrid_DoiBongSan.ItemsSource = doiBongSans;
+
         }
 
-        QuanLyGiaiVoDichDataContext dataContext = new QuanLyGiaiVoDichDataContext();
-
-
-        public ObservableCollection<DoiBongSan> Get_DoiBong_San()
+        private ObservableCollection<DoiBongSan> FillData()
         {
+            ObservableCollection<DoiBongSan> doiBongSans = new ObservableCollection<DoiBongSan>();
+            List<DOIBONG> doibongs = GetDoiBong();
+            List<SAN> sans = GetSan();
             
-            ObservableCollection<DoiBongSan> ds = new ObservableCollection<DoiBongSan>();
-            ds.Add(new DoiBongSan(1,1,"đội 1","mùa 1", 1,"sân 1",123,"bình"));       
-            ds.Add(new DoiBongSan(2,1,"đội 1","mùa 1", 1,"sân 1",123,"bình"));       
-            ds.Add(new DoiBongSan(3,1,"đội 1","mùa 1", 1,"sân 1",123,"bình"));       
-            ds.Add(new DoiBongSan(4,1,"đội 1","mùa 1", 1,"sân 1",123,"bình"));       
-            ds.Add(new DoiBongSan(5,1,"đội 1","mùa 1", 1,"sân 1",123,"bình"));       
-            ds.Add(new DoiBongSan(6,1,"đội 1","mùa 1", 1,"sân 1",123,"bình"));       
+            for (int i = 0; i < doibongs.Count; i++)
+            {
+                doiBongSans.Add(new DoiBongSan(doibongs[i].MADOI,doibongs[i].TENDOI,sans[i].MASAN,sans[i].TENSAN,sans[i].SUCCHUA,sans[i].DIACHI));
+            }
+            
 
-            return ds;
+            return doiBongSans;
+        }
+
+        private List<DOIBONG> GetDoiBong()
+        {
+            return (from db in dataContext.DOIBONGs select db).ToList();
+        }
+
+        private List<SAN> GetSan()
+        {
+            return (from s in dataContext.SANs select s).ToList();
+        }
+
+        private void btn_Xacnhan(object sender, RoutedEventArgs e)
+        {
+            dataContext.DOIBONGs.Add(new DOIBONG() {TENDOI = txtTendoi.Text});
+            dataContext.SANs.Add(new SAN()
+            {
+                TENSAN = txtTensan.Text.Trim(),
+                SUCCHUA = int.Parse(txtSucchua.Text.Trim()),
+                DIACHI = txtDiachi.Text.Trim()
+            });
+            dataContext.SaveChanges();
+            MessageBox.Show("ngon");
         }
 
     }

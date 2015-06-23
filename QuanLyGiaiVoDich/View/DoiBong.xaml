@@ -33,38 +33,36 @@
             </StackPanel.Resources>
             <StackPanel>
                 <Label>Tên Đội:</Label>
-                <TextBox></TextBox>
+                <TextBox Name="txtTendoi"></TextBox>
                 <Label>Mùa Giải:</Label>
                 <TextBox IsReadOnly="True"></TextBox>
             </StackPanel>
 
             <StackPanel >
                 <Label>Sân Nhà:</Label>
-                <TextBox></TextBox>          
+                <TextBox Name="txtTensan"></TextBox>          
                 <Label>Sức Chứa:</Label>
-                <TextBox Width="80"></TextBox>  
+                <TextBox Name="txtSucchua" Width="80"></TextBox>  
                 <Label>Địa Chỉ:</Label>
-                <TextBox></TextBox>
+                <TextBox Name="txtDiachi"></TextBox>
             </StackPanel>
 
             <StackPanel HorizontalAlignment="Center">
-                <Button Content="Xác Nhận" ></Button>
+                <Button Content="Xác Nhận" Click="btn_Xacnhan" ></Button>
                 <Button Content="Hủy" ></Button>
             </StackPanel>
 
             <StackPanel Orientation="Vertical">
                 <TextBlock HorizontalAlignment="Left" Margin="0,10,0,20">Đanh Sách Đội Bóng</TextBlock>
                 <ScrollViewer>
-                    <DataGrid x:Name="DataGridDoi" ItemsSource="{Binding}" AutoGenerateColumns="False">
+                    <DataGrid x:Name="DataGrid_DoiBongSan" ItemsSource="{Binding}" AutoGenerateColumns="False">
                         <DataGrid.Columns >
-                            <mui:DataGridTextColumn Header="STT" Binding="{Binding Stt}" />
-                            <mui:DataGridTextColumn Header="Mã Đội" Binding="{Binding MADOI}" />
-                            <mui:DataGridTextColumn Header="Tên Đội" Binding="{Binding TENDOI}"/>
-                            <mui:DataGridTextColumn Header="Tên Mùa Giải" Binding="{Binding TENMUA}" />
-                            <mui:DataGridTextColumn Header="Mã Sân" Binding="{Binding MASAN}" />
-                            <mui:DataGridTextColumn Header="Tên Sân" Binding="{Binding TENSAN}" />
-                            <mui:DataGridTextColumn Header="Sức Chứa" Binding="{Binding SUCCHUA}" />
-                            <mui:DataGridTextColumn Header="Địa Chỉ" Binding="{Binding DIACHI}" />
+                            <mui:DataGridTextColumn Header="Mã Đội" Binding="{Binding Madoi}" />
+                            <mui:DataGridTextColumn Header="Tên Đội" Binding="{Binding Tendoi}"/>
+                            <mui:DataGridTextColumn Header="Mã Sân" Binding="{Binding Masan}" />
+                            <mui:DataGridTextColumn Header="Tên Sân" Binding="{Binding Tensan}" />
+                            <mui:DataGridTextColumn Header="Sức Chứa" Binding="{Binding Succhua}" />
+                            <mui:DataGridTextColumn Header="Địa Chỉ" Binding="{Binding Diachi}" />
                         </DataGrid.Columns>
                     </DataGrid>
                 </ScrollViewer>

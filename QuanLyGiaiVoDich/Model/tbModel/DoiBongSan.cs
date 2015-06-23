@@ -11,22 +11,20 @@ namespace QuanLyGiaiVoDich.Model.tbModel
 {
     public class DoiBongSan : INotifyPropertyChanged
     {
-        public int STT;
         public int MADOI;
         public string TENDOI;
-        public string TENMUA;
         public int MASAN;
         public string TENSAN;
-        public int SUCCHUA;
+        public int? SUCCHUA;
         public string DIACHI;
 
-        public int Stt
+        public int? Succhua
         {
-            get { return STT; }
+            get { return SUCCHUA; }
             set
             {
-                if (value == STT) return;
-                STT = value;
+                if (value == SUCCHUA) return;
+                SUCCHUA = value;
                 OnPropertyChanged();
             }
         }
@@ -64,17 +62,6 @@ namespace QuanLyGiaiVoDich.Model.tbModel
             }
         }
 
-        public string Tenmua
-        {
-            get { return TENMUA; }
-            set
-            {
-                if (value == TENMUA) return;
-                TENMUA = value;
-                OnPropertyChanged();
-            }
-        }
-
         public string Tensan
         {
             get { return TENSAN; }
@@ -86,16 +73,7 @@ namespace QuanLyGiaiVoDich.Model.tbModel
             }
         }
 
-        public int Succhua
-        {
-            get { return SUCCHUA; }
-            set
-            {
-                if (value == SUCCHUA) return;
-                SUCCHUA = value;
-                OnPropertyChanged();
-            }
-        }
+      
 
         public string Diachi
         {
@@ -108,13 +86,11 @@ namespace QuanLyGiaiVoDich.Model.tbModel
             }
         }
 
-        public DoiBongSan(int stt, int madoi, string tendoi,string muagiai, int masan, string tensan, int succhua, string diachi)
+        public DoiBongSan(int madoi, string tendoi, int masan, string tensan, int? succhua, string diachi)
         {
-            STT = stt;
             MADOI = madoi;
             TENDOI = tendoi;
             MASAN = masan;
-            TENMUA = muagiai;
             TENSAN = tensan;
             DIACHI = diachi;
             SUCCHUA = succhua;

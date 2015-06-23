@@ -79,7 +79,6 @@
     <Compile Include="Model\tbModel\DoiBongSan.cs" />
     <Compile Include="Model\TRANDAU.cs" />
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="ViewModel\DoiBong.cs" />
     <Compile Include="View\DoiBong.xaml.cs">
       <DependentUpon>DoiBong.xaml</DependentUpon>
     </Compile>
@@ -172,7 +171,9 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
