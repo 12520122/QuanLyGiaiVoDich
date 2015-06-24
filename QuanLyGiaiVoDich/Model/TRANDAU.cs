@@ -9,6 +9,14 @@ namespace QuanLyGiaiVoDich.Model
     [Table("TRANDAU")]
     public partial class TRANDAU
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public TRANDAU()
+        {
+            BANGXEPHANGs = new HashSet<BANGXEPHANG>();
+            CHITIETTRANDAUs = new HashSet<CHITIETTRANDAU>();
+            KETQUAs = new HashSet<KETQUA>();
+        }
+
         [Key]
         public int MATD { get; set; }
 
@@ -23,10 +31,17 @@ namespace QuanLyGiaiVoDich.Model
 
         public int MAVONG { get; set; }
 
-        public int? SBTDOI1 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BANGXEPHANG> BANGXEPHANGs { get; set; }
 
-        public int? SBTDOI2 { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CHITIETTRANDAU> CHITIETTRANDAUs { get; set; }
 
-        public int? THOILUONG { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<KETQUA> KETQUAs { get; set; }
+
+        public virtual SAN SAN { get; set; }
+
+        public virtual VONGDAU VONGDAU { get; set; }
     }
 }

@@ -6,31 +6,25 @@ namespace QuanLyGiaiVoDich.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("SAN")]
-    public partial class SAN
+    [Table("VONGDAU")]
+    public partial class VONGDAU
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public SAN()
+        public VONGDAU()
         {
-            DOIBONG_MUAGIAI = new HashSet<DOIBONG_MUAGIAI>();
             TRANDAUs = new HashSet<TRANDAU>();
         }
 
         [Key]
-        public int MASAN { get; set; }
+        public int MAVONG { get; set; }
 
         [Required]
         [StringLength(50)]
-        public string TENSAN { get; set; }
+        public string TENVONG { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string DIACHI { get; set; }
+        public int? MAMUA { get; set; }
 
-        public int? SUCCHUA { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DOIBONG_MUAGIAI> DOIBONG_MUAGIAI { get; set; }
+        public virtual MUAGIAI MUAGIAI { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TRANDAU> TRANDAUs { get; set; }

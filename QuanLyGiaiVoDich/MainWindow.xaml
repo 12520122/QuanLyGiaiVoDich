@@ -2,9 +2,9 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mui="http://firstfloorsoftware.com/ModernUI"
-        Title="mui" IsTitleVisible="True"
+        Title="Quản Lý Giải Vô Địch Bóng Đá Quốc Gia V1.0" IsTitleVisible="True"
         
-        ContentSource="Pages/Layout/QuanLyDoiBong.xaml" 
+        ContentSource="Pages/Layout/ThongTinGiaiDau.xaml" 
         WindowStartupLocation="CenterScreen" Width="1200" Height="700">
 
     <mui:ModernWindow.MenuLinkGroups>
@@ -34,8 +34,7 @@
 
         <mui:LinkGroup DisplayName="Thống Kế - Báo Cáo">
             <mui:LinkGroup.Links>
-                <mui:Link DisplayName="Báo Cáo" Source="/Pages/Layout/BaoCao.xaml" />
-                <mui:Link DisplayName="Biểu Mẫu" Source="/Pages/Layout/BieuMau.xaml" />
+                <mui:Link Source="Pages/Layout/ThongKeBaoCao.xaml" />            
             </mui:LinkGroup.Links>
         </mui:LinkGroup>
 

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace QuanLyGiaiVoDich.Pages.Layout
 {
     /// <summary>
-    /// Interaction logic for BieuMau.xaml
+    /// Interaction logic for ThongTinDoiBong.xaml
     /// </summary>
-    public partial class BieuMau : UserControl
+    public partial class ThongTinDoiBong : UserControl
     {
-        public BieuMau()
+        public ThongTinDoiBong()
         {
             InitializeComponent();
         }

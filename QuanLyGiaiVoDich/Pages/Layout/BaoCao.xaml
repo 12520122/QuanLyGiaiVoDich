@@ -11,8 +11,10 @@
         <mui:ModernTab Layout="List">
             <mui:ModernTab.Links>
                 <!-- TODO: set @Source -->
-                <mui:Link DisplayName="Item 1" />
-                <mui:Link DisplayName="Item 2" />
+                <mui:Link DisplayName="danh sách đội bóng" />
+                <mui:Link DisplayName="danh sách cầu thủ" />
+                <mui:Link DisplayName="lịch thi đấu" />
+                <mui:Link DisplayName="biên bản thi đấu" />
             </mui:ModernTab.Links>
         </mui:ModernTab>
     </Grid>

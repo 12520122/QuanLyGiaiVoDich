@@ -24,13 +24,12 @@ namespace QuanLyGiaiVoDich.View
     public partial class DoiBong : UserControl
     {
         QuanLyGiaiVoDichDataContext dataContext = new QuanLyGiaiVoDichDataContext();
+        ObservableCollection<DoiBongSan> doiBongSans;
 
         public DoiBong()
         {
             InitializeComponent();
-
-            ObservableCollection<DoiBongSan> doiBongSans = FillData();
-
+            //doiBongSans = FillData();
             DataGrid_DoiBongSan.ItemsSource = doiBongSans;
 
         }
@@ -60,9 +59,10 @@ namespace QuanLyGiaiVoDich.View
             return (from s in dataContext.SANs select s).ToList();
         }
 
-        private void btn_Xacnhan(object sender, RoutedEventArgs e)
+
+        private void btn_Xacnhan_Click(object sender, RoutedEventArgs e)
         {
-            dataContext.DOIBONGs.Add(new DOIBONG() {TENDOI = txtTendoi.Text});
+            dataContext.DOIBONGs.Add(new DOIBONG() { TENDOI = txtTendoi.Text });
             dataContext.SANs.Add(new SAN()
             {
                 TENSAN = txtTensan.Text.Trim(),
@@ -71,7 +71,23 @@ namespace QuanLyGiaiVoDich.View
             });
             dataContext.SaveChanges();
             MessageBox.Show("ngon");
+            doiBongSans = FillData();
+            DataGrid_DoiBongSan.ItemsSource = doiBongSans;
         }
+
+        private void btn_Sua_Click(object sender, RoutedEventArgs e)
+        {
+            
+            DoiBongSan doiBongSan = (DoiBongSan)DataGrid_DoiBongSan.SelectedItem;
+            txtTendoi.Text = doiBongSan.TENDOI;
+        }
+
+        private void DataGrid_DoiBongSan_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DoiBongSan doiBongSan = (DoiBongSan) DataGrid_DoiBongSan.SelectedItem;
+            txtTendoi.Text = doiBongSan.TENDOI;
+        }
+
 
     }
 }

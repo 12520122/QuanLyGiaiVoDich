@@ -6,14 +6,14 @@ namespace QuanLyGiaiVoDich.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("LOAIBANTHANG")]
-    public partial class LOAIBANTHANG
+    [Table("GIAMSATVIEN")]
+    public partial class GIAMSATVIEN
     {
         [Key]
-        public int MALOAIBT { get; set; }
+        public int MAGSV { get; set; }
 
         [Required]
-        [StringLength(20)]
-        public string LOAIBT { get; set; }
+        [StringLength(50)]
+        public string TENGSV { get; set; }
     }
 }

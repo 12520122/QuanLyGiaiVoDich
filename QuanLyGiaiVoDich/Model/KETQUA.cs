@@ -6,17 +6,19 @@ namespace QuanLyGiaiVoDich.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("CHITIETTRANDAU")]
-    public partial class CHITIETTRANDAU
+    [Table("KETQUA")]
+    public partial class KETQUA
     {
         [Key]
-        public int MACHITIET { get; set; }
-
-        public int? MABT { get; set; }
+        public int MAKQ { get; set; }
 
         public int? MATD { get; set; }
 
-        public virtual BANTHANG BANTHANG { get; set; }
+        public int BTDOI1 { get; set; }
+
+        public int BTDOI2 { get; set; }
+
+        public int THOILUONG { get; set; }
 
         public virtual TRANDAU TRANDAU { get; set; }
     }

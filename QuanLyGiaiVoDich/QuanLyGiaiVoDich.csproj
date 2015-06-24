@@ -69,16 +69,50 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\BANGXEPHANG.cs" />
+    <Compile Include="Model\BANTHANG.cs" />
+    <Compile Include="Model\BOPHAN.cs" />
     <Compile Include="Model\CAUTHU.cs" />
     <Compile Include="Model\CHITIETTRANDAU.cs" />
+    <Compile Include="Model\CHUCVU.cs" />
+    <Compile Include="Model\DANHSACHGHIBAN.cs" />
     <Compile Include="Model\DOIBONG.cs" />
-    <Compile Include="Model\LOAIBANTHANG.cs" />
-    <Compile Include="Model\LOAICAUTHU.cs" />
+    <Compile Include="Model\DOIBONG_CAUTHU.cs" />
+    <Compile Include="Model\DOIBONG_MUAGIAI.cs" />
+    <Compile Include="Model\GIAMSATVIEN.cs" />
+    <Compile Include="Model\KETQUA.cs" />
+    <Compile Include="Model\MUAGIAI.cs" />
+    <Compile Include="Model\NHANVIEN.cs" />
+    <Compile Include="Model\NHATAITRO.cs" />
     <Compile Include="Model\QuanLyGiaiVoDichDataContext.cs" />
+    <Compile Include="Model\QUYDINHBANTHANG.cs" />
+    <Compile Include="Model\QUYDINHCAUTHU.cs" />
     <Compile Include="Model\SAN.cs" />
+    <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\tbModel\DoiBongSan.cs" />
+    <Compile Include="Model\THEPHAT.cs" />
     <Compile Include="Model\TRANDAU.cs" />
+    <Compile Include="Model\TRONGTAI.cs" />
+    <Compile Include="Model\VONGDAU.cs" />
+    <Compile Include="Pages\Layout\CauThu.xaml.cs">
+      <DependentUpon>CauThu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layout\ThongKe.xaml.cs">
+      <DependentUpon>ThongKe.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layout\ThongKeBaoCao.xaml.cs">
+      <DependentUpon>ThongKeBaoCao.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layout\ThongTinDoiBong.xaml.cs">
+      <DependentUpon>ThongTinDoiBong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="View\ChiTietCauThu.xaml.cs">
+      <DependentUpon>ChiTietCauThu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ChiTietDoiBong.xaml.cs">
+      <DependentUpon>ChiTietDoiBong.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\DoiBong.xaml.cs">
       <DependentUpon>DoiBong.xaml</DependentUpon>
     </Compile>
@@ -94,7 +128,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Layout\BieuMau.xaml">
+    <Page Include="Pages\Layout\CauThu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -110,6 +144,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Layout\ThongKe.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Layout\ThongKeBaoCao.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Layout\ThongTinDoiBong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Layout\ThongTinGiaiDau.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -120,9 +166,6 @@
     </Page>
     <Compile Include="Pages\Layout\BaoCao.xaml.cs">
       <DependentUpon>BaoCao.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Layout\BieuMau.xaml.cs">
-      <DependentUpon>BieuMau.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Layout\KetQuaThiDau.xaml.cs">
       <DependentUpon>KetQuaThiDau.xaml</DependentUpon>
@@ -162,9 +205,17 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Page Include="View\DoiBong.xaml">
+    <Page Include="View\ChiTietCauThu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ChiTietDoiBong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DoiBong.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
