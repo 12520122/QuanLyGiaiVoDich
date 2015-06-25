@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QuanLyGiaiVoDich.Pages.Layout
+namespace QuanLyGiaiVoDich.View
 {
     /// <summary>
-    /// Interaction logic for ThongTinDoiBong.xaml
+    /// Interaction logic for XemLichThiDau.xaml
     /// </summary>
-    public partial class ThongTinDoiBong : UserControl
+    public partial class XemLichThiDau : UserControl
     {
-        public ThongTinDoiBong()
+        public XemLichThiDau()
         {
             InitializeComponent();
         }

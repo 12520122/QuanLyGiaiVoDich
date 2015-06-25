@@ -4,64 +4,68 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             xmlns:Local="clr-namespace:QuanLyGiaiVoDich.ViewModel"
+             xmlns:local="clr-namespace:QuanLyGiaiVoDich.Model"
              mc:Ignorable="d" 
-             d:DesignHeight="600" d:DesignWidth="700">
-    <Grid Style="{StaticResource ContentRoot}">
-        <StackPanel Orientation="Vertical" Margin="0,10" HorizontalAlignment="Left">
-            <StackPanel.Resources>
-                <Style TargetType="StackPanel">
-                    <Setter Property="Orientation" Value="Horizontal"></Setter>
-                    <Setter Property="Margin" Value="0,10"></Setter>
-                </Style>
-                <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
-                    <Setter Property="Width" Value="80"></Setter>
-                    <Setter Property="HorizontalAlignment" Value="Center"></Setter>
-                    <Setter Property="VerticalAlignment" Value="Center"></Setter>
-                    <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
-                </Style>
-                
-                <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
-                    <Setter Property="Width" Value="200"></Setter>
-                    <Setter Property="Margin" Value="0,0,15,0"></Setter>
-                </Style>
-                
-                <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-                    <Setter Property="Width" Value="100"></Setter>
-                    <Setter Property="Margin" Value="20,10,20,10"></Setter>
-                </Style>
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.DataContext>
+        <Local:DoiBongVM />
+    </UserControl.DataContext>
+    <Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+            <StackPanel Orientation="Vertical" Margin="0,10" HorizontalAlignment="Left">
+                <StackPanel.Resources>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="Orientation" Value="Horizontal"></Setter>
+                        <Setter Property="Margin" Value="0,10"></Setter>
+                    </Style>
+                    <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                        <Setter Property="Width" Value="80"></Setter>
+                        <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+                        <Setter Property="VerticalAlignment" Value="Center"></Setter>
+                        <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+                    </Style>
 
-            </StackPanel.Resources>
-            <StackPanel>
-                <Label>Tên Đội:</Label>
-                <TextBox Name="txtTendoi"></TextBox>
-             
-            </StackPanel>
+                    <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+                        <Setter Property="Width" Value="200"></Setter>
+                        <Setter Property="Margin" Value="0,0,15,0"></Setter>
+                    </Style>
 
-            <StackPanel >
-                <Label>Sân Nhà:</Label>
-                <TextBox Name="txtTensan"></TextBox>          
-                <Label>Sức Chứa:</Label>
-                <TextBox Name="txtSucchua" Width="80"></TextBox>  
-                <Label>Địa Chỉ:</Label>
-                <TextBox Name="txtDiachi"></TextBox>
-            </StackPanel>
+                    <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                        <Setter Property="Width" Value="100"></Setter>
+                        <Setter Property="Margin" Value="20,10,20,10"></Setter>
 
-            <StackPanel HorizontalAlignment="Center">
-                <Button Name="btn_Xacnhan" Content="Xác Nhận" Click="btn_Xacnhan_Click" ></Button>
-                <Button Name="btn_Sua" Content="Sửa" Click="btn_Sua_Click"></Button>
-                <Button Name="btn_Xoa" Content="Xoá"></Button>
-                <Button Name="btn_huy" Content="Hủy" ></Button>
-            </StackPanel>
-        
-            <StackPanel Orientation="Vertical">
-                <ScrollViewer Height="300" Width="668">
-                    <Grid>
-                        <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" Text="Đanh Sách Đội Bóng" Style="{StaticResource Heading2}"/>
-                        <ScrollViewer Margin="0,36,0,0">
-                            <ScrollViewer>
-                                <DataGrid x:Name="DataGrid_DoiBongSan" ItemsSource="{Binding}" AutoGenerateColumns="False" SelectionChanged="DataGrid_DoiBongSan_SelectionChanged" >
+                    </Style>
+
+                </StackPanel.Resources>
+                <StackPanel >
+                    <Label Content="Tên Đội"/>
+                    <TextBox Name="txtTendoi" Text="{Binding ElementName=DataGrid_DoiBongSan, Path=SelectedItem.TENDOI}"></TextBox>
+                    <Label Content="Sân Nhà:"/>
+                    <TextBox/>
+                </StackPanel>
+                <StackPanel>
+                    <Label Content="Sức Chứa:"/>
+                    <TextBox/>
+                    <Label Content="Địa Chỉ:"/>
+                    <TextBox/>
+                </StackPanel>
+
+                <StackPanel HorizontalAlignment="Center">
+                    <Button Name="btn_Xacnhan" Content="Xác Nhận" Command="{Binding XacnhanCmd, Mode=TwoWay}" CommandParameter="{Binding ElementName=DataGrid_DoiBongSan , Path=SelectedItem}"></Button>
+                    <Button Name="btn_Sua" Content="Sửa"></Button>
+                    <Button Name="btn_Xoa" Content="Xoá"></Button>
+                    <Button Name="btn_Huy" Content="Hủy" ></Button>
+                </StackPanel>
+
+                <StackPanel Orientation="Vertical">
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                        <Grid>
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock HorizontalAlignment="Left" Margin="0,0,0,20"><Run Text="Đanh Sách Đội Bóng" /></TextBlock>
+                                <DataGrid DataContext="{Binding DoiBongSan}" AutoGenerateColumns="False">
                                     <DataGrid.Columns >
-                                        <mui:DataGridTextColumn Header="Mã Đội" Binding="{Binding Madoi}" />
+                                        <mui:DataGridTextColumn Header="Mã Đội" Binding="{Binding Madoi}"/>
                                         <mui:DataGridTextColumn Header="Tên Đội" Binding="{Binding Tendoi}"/>
                                         <mui:DataGridTextColumn Header="Mã Sân" Binding="{Binding Masan}" />
                                         <mui:DataGridTextColumn Header="Tên Sân" Binding="{Binding Tensan}" />
@@ -69,11 +73,11 @@
                                         <mui:DataGridTextColumn Header="Địa Chỉ" Binding="{Binding Diachi}" />
                                     </DataGrid.Columns>
                                 </DataGrid>
-                            </ScrollViewer>
-                        </ScrollViewer>
-                    </Grid>
-                </ScrollViewer>
+                            </StackPanel>
+                        </Grid>
+                    </ScrollViewer>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
+        </ScrollViewer>
     </Grid>
 </UserControl>

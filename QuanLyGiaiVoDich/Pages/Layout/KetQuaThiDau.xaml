@@ -8,11 +8,11 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid Style="{StaticResource ContentRoot}">
         <!-- TODO: set @SelectedSource -->
-        <mui:ModernTab Layout="List">
+        <mui:ModernTab Layout="List" SelectedSource="/QuanLyGiaiVoDich;component/Pages/Layout/NhapKetQua.xaml">
             <mui:ModernTab.Links>
                 <!-- TODO: set @Source -->
-                <mui:Link DisplayName="nhập kết quả" />
-                <mui:Link DisplayName="kết quả vòng bảng" />
+                <mui:Link DisplayName="nhập kết quả" Source="/QuanLyGiaiVoDich;component/Pages/Layout/NhapKetQua.xaml" />
+                <mui:Link DisplayName="xem kết quả" Source="/QuanLyGiaiVoDich;component/View/XemKetQua.xaml" />
              
             </mui:ModernTab.Links>
         </mui:ModernTab>

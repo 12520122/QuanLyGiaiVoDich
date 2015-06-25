@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="QuanLyGiaiVoDich.View.ChiTietCauThu"
+﻿<UserControl x:Class="QuanLyGiaiVoDich.View.XemKetQua"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -9,7 +9,7 @@
     <Grid>
         <ScrollViewer>
             <StackPanel MinWidth="200">
-                <TextBlock Text="chi tiết cầu thủ" Style="{StaticResource Heading2}" />
+                <TextBlock Text="xem kết quả" Style="{StaticResource Heading2}" />
                 <TextBlock Text="Content goes here" />
             </StackPanel>
         </ScrollViewer>

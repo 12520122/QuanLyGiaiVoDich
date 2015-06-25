@@ -1,89 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using QuanLyGiaiVoDich.Annotations;
 
 namespace QuanLyGiaiVoDich.Model.tbModel
 {
-    public class DoiBongSan : INotifyPropertyChanged
+    public class DoiBongSan
     {
-        public int MADOI;
-        public string TENDOI;
-        public int MASAN;
-        public string TENSAN;
-        public int? SUCCHUA;
-        public string DIACHI;
-
-        public int? Succhua
-        {
-            get { return SUCCHUA; }
-            set
-            {
-                if (value == SUCCHUA) return;
-                SUCCHUA = value;
-                OnPropertyChanged();
-            }
-        }
+        private int MADOI;
+        private string TENDOI;
+        private int MASAN;
+        private string TENSAN;
+        private int? SUCCHUA;
+        private string DIACHI;
 
         public int Madoi
         {
             get { return MADOI; }
-            set
-            {
-                if (value == MADOI) return;
-                MADOI = value;
-                OnPropertyChanged();
-            }
+            set { MADOI = value; }
         }
 
         public string Tendoi
         {
             get { return TENDOI; }
-            set
-            {
-                if (value == TENDOI) return;
-                TENDOI = value;
-                OnPropertyChanged();
-            }
+            set { TENDOI = value; }
         }
 
         public int Masan
         {
             get { return MASAN; }
-            set
-            {
-                if (value == MASAN) return;
-                MASAN = value;
-                OnPropertyChanged();
-            }
+            set { MASAN = value; }
         }
 
         public string Tensan
         {
             get { return TENSAN; }
-            set
-            {
-                if (value == TENSAN) return;
-                TENSAN = value;
-                OnPropertyChanged();
-            }
+            set { TENSAN = value; }
         }
 
-      
+        public int? Succhua
+        {
+            get { return SUCCHUA; }
+            set { SUCCHUA = value; }
+        }
 
         public string Diachi
         {
             get { return DIACHI; }
-            set
-            {
-                if (value == DIACHI) return;
-                DIACHI = value;
-                OnPropertyChanged();
-            }
+            set { DIACHI = value; }
         }
 
         public DoiBongSan(int madoi, string tendoi, int masan, string tensan, int? succhua, string diachi)
@@ -94,17 +59,8 @@ namespace QuanLyGiaiVoDich.Model.tbModel
             TENSAN = tensan;
             DIACHI = diachi;
             SUCCHUA = succhua;
-
         }
 
         public DoiBongSan() { }
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        [NotifyPropertyChangedInvocator]
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            var handler = PropertyChanged;
-            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
-        }
     }
 }

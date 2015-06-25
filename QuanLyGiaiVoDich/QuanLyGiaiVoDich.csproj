@@ -94,8 +94,11 @@
     <Compile Include="Model\TRANDAU.cs" />
     <Compile Include="Model\TRONGTAI.cs" />
     <Compile Include="Model\VONGDAU.cs" />
-    <Compile Include="Pages\Layout\CauThu.xaml.cs">
-      <DependentUpon>CauThu.xaml</DependentUpon>
+    <Compile Include="Pages\Layout\LichThiDau.xaml.cs">
+      <DependentUpon>LichThiDau.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Layout\NhapKetQua.xaml.cs">
+      <DependentUpon>NhapKetQua.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Layout\ThongKe.xaml.cs">
       <DependentUpon>ThongKe.xaml</DependentUpon>
@@ -103,18 +106,49 @@
     <Compile Include="Pages\Layout\ThongKeBaoCao.xaml.cs">
       <DependentUpon>ThongKeBaoCao.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\Layout\ThongTinDoiBong.xaml.cs">
-      <DependentUpon>ThongTinDoiBong.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="RelayCommand.cs" />
+    <Compile Include="ViewModelBase.cs" />
+    <Compile Include="ViewModel\DanhsachMuagiaiVM.cs" />
+    <Compile Include="ViewModel\DoiBongVM.cs" />
+    <Compile Include="View\BanThang.xaml.cs">
+      <DependentUpon>BanThang.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BanThangThePhat.xaml.cs">
+      <DependentUpon>BanThangThePhat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CauThu.xaml.cs">
+      <DependentUpon>CauThu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ChiTietCauThu.xaml.cs">
       <DependentUpon>ChiTietCauThu.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\ChiTietDoiBong.xaml.cs">
       <DependentUpon>ChiTietDoiBong.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\DanhSachMuaGiai.xaml.cs">
+      <DependentUpon>DanhSachMuaGiai.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\DoiBong.xaml.cs">
       <DependentUpon>DoiBong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\KetQua.xaml.cs">
+      <DependentUpon>KetQua.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\LapLich.xaml.cs">
+      <DependentUpon>LapLich.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MuaGiai.xaml.cs">
+      <DependentUpon>MuaGiai.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ThePhat.xaml.cs">
+      <DependentUpon>ThePhat.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\XemKetQua.xaml.cs">
+      <DependentUpon>XemKetQua.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\XemLichThiDau.xaml.cs">
+      <DependentUpon>XemLichThiDau.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -128,15 +162,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\Layout\CauThu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\Layout\KetQuaThiDau.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Layout\LichThiDau.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\Layout\NhapKetQua.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -149,10 +183,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Layout\ThongKeBaoCao.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\Layout\ThongTinDoiBong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -169,9 +199,6 @@
     </Compile>
     <Compile Include="Pages\Layout\KetQuaThiDau.xaml.cs">
       <DependentUpon>KetQuaThiDau.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pages\Layout\LichThiDau.xaml.cs">
-      <DependentUpon>LichThiDau.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Layout\QuanLyDoiBong.xaml.cs">
       <DependentUpon>QuanLyDoiBong.xaml</DependentUpon>
@@ -205,6 +232,18 @@
       <DependentUpon>SettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Page Include="View\BanThang.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BanThangThePhat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CauThu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\ChiTietCauThu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -213,7 +252,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\DanhSachMuaGiai.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="View\DoiBong.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\KetQua.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LapLich.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MuaGiai.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\ThePhat.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\XemKetQua.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\XemLichThiDau.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -222,9 +289,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

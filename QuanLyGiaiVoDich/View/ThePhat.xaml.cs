@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace QuanLyGiaiVoDich.Pages.Layout
+namespace QuanLyGiaiVoDich.View
 {
     /// <summary>
-    /// Interaction logic for CauThu.xaml
+    /// Interaction logic for ThePhat.xaml
     /// </summary>
-    public partial class CauThu : UserControl
+    public partial class ThePhat : UserControl
     {
-        public CauThu()
+        public ThePhat()
         {
             InitializeComponent();
         }
